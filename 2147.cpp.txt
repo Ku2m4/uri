@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+#include<iomanip>
+
+
+using namespace std;
+
+int main(){
+
+    int c, tempo, tam;
+    string palavra;
+    cin >> c;
+
+    while(c--){
+      cin >> palavra;
+
+      palavra.erase(0, 6);
+
+      tam = palavra.size();
+      
+      palavra.erase(tam-3, tam);
+      
+      tam = palavra.size();
+
+      cout << fixed << setprecision(2) << (0.09+(tam*0.01)) << endl;
+
+    }
+
+    return 0;
+}
